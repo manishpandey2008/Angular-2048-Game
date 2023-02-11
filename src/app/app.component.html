@@ -49,8 +49,8 @@
             <ng-container *ngFor="let row of matrix">
               <ng-container *ngFor="let column of row">
                 <div class="w-full h-full border border-red-300 flex justify-center items-center">
-                  <div [ngClass]="{ 'bg-red-100 ':column===0 , 'bg-blue-100 active':column!==0}" class="bg-blue-100 w-20 h-20 rounded-md text-center" >
-                    <span class="  text-3xl font-mono font-bold">{{column===0 ?' ':column}}</span>
+                  <div [ngClass]="{ 'bg-red-100 ':column===0 , 'bg-blue-100 active':column!==0}" class=" w-20 h-20  rounded-md text-center " >
+                    <div class="  text-3xl font-mono font-bold mt-5">{{column===0 ?' ':column}}</div>
                   </div>
                 </div>
               </ng-container>

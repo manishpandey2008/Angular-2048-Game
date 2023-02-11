@@ -8,10 +8,9 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
 
   matrix:any[][]=[];
-  numberOfColumns=5;
+  numberOfColumns=4;
   gameOver=false;
   currentScore=0;
-  gridVal="grid-cols-5";
   isView=false
   
   ngOnInit(): void {
@@ -89,7 +88,6 @@ export class AppComponent implements OnInit{
         this.matrix[i]= arr;
       }
   }
-
 
   rightMove(){
     for(let i=0;i<this.numberOfColumns;i++){
