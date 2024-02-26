@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -52,6 +52,15 @@ export class AppComponent implements OnInit{
       this.checkForGameOver()
     } else this.generate()
   }
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    if(event['code']=='ArrowRight') this.clickEvent('right')
+    else if(event['code']=='ArrowDown') this.clickEvent('down')
+    else if(event['code']=='ArrowLeft') this.clickEvent('left')
+    else if(event['code']=='ArrowUp') this.clickEvent('up')
+  }
+  
 
   checkForGameOver(){
     this.gameOver=true
